@@ -19,7 +19,7 @@ public class FuncionarioController {
 		if (funcionario.getNome() == null || funcionario.getNome().length() < 3) {
 			throw new Exception("Funcionário inválido!");
 		}
-		FuncionarioDao.getInstance().salvar(funcionario);
+		FuncionarioDao.getInstance().atualizar(funcionario);
 		
 	}
 	

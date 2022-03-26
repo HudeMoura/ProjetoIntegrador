@@ -1,6 +1,7 @@
 package model;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Chamado {
 
@@ -77,6 +78,11 @@ public class Chamado {
 		Double consumoGasolinaLitros = this.quilometrosPercorridos / veiculo.getQuilometrosPorLitro();
 
 		return consumoGasolinaLitros * percentualGasolinaPorLitro * densidadeGasolina * fatorTransformacaoGasolina;
+	}
+	
+	public String toString() {
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+		return this.data.format(formatter) + " - " + this.endereco + " - " + this.funcionario.toString();
 	}
 
 }

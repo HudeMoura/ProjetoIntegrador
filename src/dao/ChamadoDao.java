@@ -20,15 +20,17 @@ public class ChamadoDao {
 	
 	public void salvar(Chamado chamado) {
 		listaChamado.add(chamado);
+		int indexOf = listaChamado.indexOf(chamado);
+		listaChamado.get(indexOf).setId(indexOf + 1);
 	}
 	
 	public void atualizar(Chamado chamado) {
-		listaChamado.set(chamado.getId(), chamado);
+		listaChamado.set(chamado.getId() - 1, chamado);
 	}
 
 	
 	public void excluir(int idChamado) {
-		listaChamado.remove(idChamado);
+		listaChamado.remove(idChamado - 1);
 		
 	}
 	

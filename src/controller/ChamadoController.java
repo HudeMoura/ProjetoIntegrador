@@ -9,7 +9,7 @@ import model.Chamado;
 public class ChamadoController {
 	
 	public void salvar(Chamado chamado) throws Exception {
-		if (chamado.getId() == 0) {
+		if (chamado.getFuncionario() == null || chamado.getVeiculo() == null || chamado.getEndereco() == null || chamado.getData() == null) {
 			throw new Exception("Chamado inválido!");
 		}
 		ChamadoDao.getInstance().salvar(chamado);

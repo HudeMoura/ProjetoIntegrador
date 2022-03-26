@@ -54,4 +54,8 @@ public class Veiculo {
 	public void setVeiculoDisponivel(boolean veiculoDisponivel) {
 		this.veiculoDisponivel = veiculoDisponivel;
 	}
+	
+	public String toString() {
+		return this.placa + " - " + this.descricao;
+	}
 }

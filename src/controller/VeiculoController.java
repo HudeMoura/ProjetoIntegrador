@@ -2,14 +2,15 @@ package controller;
 
 import java.util.List;
 
+import dao.FuncionarioDao;
 import dao.VeiculoDao;
 import model.Veiculo;
 
 public class VeiculoController {
 	
 	public void salvar(Veiculo veiculo) throws Exception {
-		if (veiculo.getId() == 0) {
-			throw new Exception("Veiculo inválido!");
+		if (veiculo.getDescricao() == null || veiculo.getPlaca() == null) {
+			throw new Exception("Veiculo sem descrição ou placa!");
 		}
 		VeiculoDao.getInstance().salvar(veiculo);
 	}
@@ -29,6 +30,6 @@ public class VeiculoController {
 	}
 	
 	public List<Veiculo> listar() {
-		return null;
+		return VeiculoDao.getInstance().listar();
 	}
 }

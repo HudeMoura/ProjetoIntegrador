@@ -22,15 +22,17 @@ public class FuncionarioDao {
 	
 	public void salvar(Funcionario funcionario) {
 		listaFuncionario.add(funcionario);
+		int indexOf = listaFuncionario.indexOf(funcionario);
+		listaFuncionario.get(indexOf).setId(indexOf + 1);
 	}
 	
 	public void atualizar(Funcionario funcionario) {
-		listaFuncionario.set(funcionario.getId(), funcionario);
+		listaFuncionario.set(funcionario.getId() - 1, funcionario);
 	}
 
 	
 	public void excluir(int idFuncionario) {
-		listaFuncionario.remove(idFuncionario);
+		listaFuncionario.remove(idFuncionario - 1);
 		
 	}
 	

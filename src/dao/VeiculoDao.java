@@ -20,15 +20,17 @@ public class VeiculoDao {
 	
 	public void salvar(Veiculo veiculo) {
 		listaVeiculo.add(veiculo);
+		int indexOf = listaVeiculo.indexOf(veiculo);
+		listaVeiculo.get(indexOf).setId(indexOf + 1);
 	}
 	
 	public void atualizar(Veiculo veiculo) {
-		listaVeiculo.set(veiculo.getId(), veiculo);
+		listaVeiculo.set(veiculo.getId() - 1, veiculo);
 	}
 
 	
 	public void excluir(int idVeiculo) {
-		listaVeiculo.remove(idVeiculo);
+		listaVeiculo.remove(idVeiculo - 1);
 		
 	}
 	

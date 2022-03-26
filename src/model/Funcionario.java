@@ -56,4 +56,8 @@ public class Funcionario {
 	public void setHabilitadoConduzir(boolean habilitadoConduzir) {
 		this.habilitadoConduzir = habilitadoConduzir;
 	}
+	
+	public String toString() {
+		return this.nome + " - " + this.cpf;
+	}
 }
