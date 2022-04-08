@@ -14,6 +14,9 @@ public class Veiculo {
 		this.quilometrosPorLitro = quilometrosPorLitro;
 		this.veiculoDisponivel = veiculoDisponivel;
 	}
+	
+	public Veiculo() {
+	}
 
 	public int getId() {
 		return id;

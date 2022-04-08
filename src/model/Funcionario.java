@@ -16,7 +16,10 @@ public class Funcionario {
 		this.dataNascimento = dataNascimento;
 		this.habilitadoConduzir = habilitadoConduzir;
 	}
-
+	
+	public Funcionario() {
+	}
+	
 	public int getId() {
 		return id;
 	}

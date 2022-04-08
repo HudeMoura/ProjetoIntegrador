@@ -19,6 +19,9 @@ public class Chamado {
 		this.quilometrosPercorridos = 0.0;
 		this.data = data;
 	}
+	
+	public Chamado() {
+	}
 
 	public int getId() {
 		return id;
